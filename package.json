@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "npm run build && node build/index",
+    "start": "node build/index",
     "build": "rimraf ./build && npx tsc && copyfiles -u 1 src/public/**/* build/ && copyfiles -u 1 src/index.html build/",
     "start:dev": "concurrently \" npm run start:backend \" \" npm run start:frontend \" ",
     "start:backend": "nodemon src/index.js",
