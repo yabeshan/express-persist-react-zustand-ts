@@ -1,12 +1,12 @@
 # App
 
-## Production (all files in **folder build**)
+## Production (all files in folder build)
 
 ```sh
 npm run start
 ```
 
-## Development (all files in **folder src**)
+## Development (all files in folder src)
 
 ```sh
 npm run start:dev
@@ -14,8 +14,8 @@ npm run start:dev
 
 ## Backend (without DB)
 
-express node-persist
+express + node-persist
 
 ## Frontend
 
-react react-router-dom zustand
+react + react-router-dom + zustand
