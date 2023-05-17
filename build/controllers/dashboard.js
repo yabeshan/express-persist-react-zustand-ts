@@ -66,6 +66,7 @@ export const getConfig = async (req, res) => {
         return res.status(200).json(config);
     }
     catch (err) {
+        addLog(req.body, "500 backend error :: " + err.message);
         res.status(500).json({
             message: "controllers-api-getConfig error message :: " + err.message
         });
@@ -73,17 +74,20 @@ export const getConfig = async (req, res) => {
 };
 export const saveConfig = async (req, res) => {
     try {
-        const { version, assets, api, errorFlag } = req.body;
+        const { version, assets, api, tunein, errorFlag } = req.body;
         await setVers(version);
         await setErrorFlag(errorFlag);
         let data = await fs.promises.readFile(global.__dirname + `/public/configs/assets/a${assets}.json`);
         const assetConfig = JSON.parse(data);
         data = await fs.promises.readFile(global.__dirname + `/public/configs/services/s${api}.json`);
         const apiConfig = JSON.parse(data);
+        data = await fs.promises.readFile(global.__dirname + `/public/configs/tunein/t${tunein}.json`);
+        const tuneinConfig = JSON.parse(data);
         const config = {
             "version": version,
-            "assets": assetConfig,
-            "api": apiConfig
+            "tunein": tuneinConfig,
+            "api": apiConfig,
+            "assets": assetConfig
         };
         data = JSON.stringify(config, null, 2);
         await fs.promises.writeFile(global.__dirname + `/public/configs/v${version}.json`, data);

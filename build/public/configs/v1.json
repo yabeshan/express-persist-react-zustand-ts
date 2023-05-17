@@ -1,9 +1,240 @@
 {
   "version": 1,
-  "assets": {
-    "assets": "1"
+  "tunein": {
+    "NotificationTab": false,
+    "TerminalTab": false
   },
   "api": {
-    "api": "1"
+    "ETH_CONFIG": {
+      "node": {
+        "fullNode": "https://goerli.infura.io/v3/32e3947da90c4544b5fda4052c31068b",
+        "api": "https://api-goerli.etherscan.io/",
+        "explorer": "https://goerli.etherscan.io/"
+      }
+    }
+  },
+  "assets": {
+    "config": {
+      "startEnabledAssetsId": "all"
+    },
+    "assets": [
+      {
+        "id": "bitcoin",
+        "title": "Bitcoin",
+        "symbol": "BTC",
+        "type": "coin",
+        "logo": "https://app.xchainer.io/assets/coins/btc.png"
+      },
+      {
+        "id": "bitcoin-legacy",
+        "title": "Bitcoin Legacy",
+        "symbol": "BTC",
+        "type": "coin",
+        "logo": "https://app.xchainer.io/assets/coins/btc.png"
+      },
+      {
+        "id": "binancecoin",
+        "title": "Smart Chain",
+        "symbol": "BNB",
+        "type": "coin",
+        "logo": "https://app.xchainer.io/assets/coins/bnb.png",
+        "tokens": [
+          {
+            "id": "most-global",
+            "title": "MOST Token",
+            "symbol": "MOST",
+            "type": "BEP20",
+            "address": "0x83aa7c0ce1c61dfA129505D55E2B262Ffb7169fd",
+            "logo": "https://app.xchainer.io/assets/coins/most.png"
+          },
+          {
+            "id": "binance-usd",
+            "title": "BUSD",
+            "symbol": "BSC-USD",
+            "type": "BEP20",
+            "address": "0x4eb6D77a6fa252A159a55823349e6fc4889FC9A1",
+            "logo": "https://app.xchainer.io/assets/coins/busd.png"
+          },
+          {
+            "id": "tkn1",
+            "title": "Token 1",
+            "symbol": "TKN1",
+            "type": "BEP20",
+            "address": "0x8F67e0f2EF34a528DFbd99912929727309366189",
+            "logo": "tokens :: bep20"
+          },
+          {
+            "id": "tkn2",
+            "title": "Token 2",
+            "symbol": "TKN2",
+            "type": "BEP20",
+            "address": "0x989fb489ABDae09244D461aC371Ae24DD7b1f9c8",
+            "logo": "tokens :: bep20"
+          },
+          {
+            "id": "tether",
+            "title": "Tether USDT",
+            "symbol": "PBSC-USD",
+            "type": "BEP20",
+            "address": "0x337610d27c682E347C9cD60BD4b3b107C9d34dDd",
+            "logo": "https://app.xchainer.io/assets/coins/usdt.png"
+          },
+          {
+            "id": "matic",
+            "title": "Matic Token",
+            "symbol": "MATIC",
+            "type": "BEP20",
+            "address": "0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee",
+            "logo": "https://app.xchainer.io/assets/coins/matic.png"
+          },
+          {
+            "id": "dai",
+            "title": "Binance Dai",
+            "symbol": "DAI",
+            "type": "BEP20",
+            "address": "0xEC5dCb5Dbf4B114C9d0F65BcCAb49EC54F6A0867",
+            "logo": "https://app.xchainer.io/assets/coins/dai.png"
+          },
+          {
+            "id": "usdc-bsc",
+            "title": "USD Coin",
+            "symbol": "USDC",
+            "type": "BEP20",
+            "address": "0x64544969ed7EBf5f083679233325356EbE738930",
+            "logo": "https://app.xchainer.io/assets/coins/usdc.png"
+          },
+          {
+            "id": "ltc",
+            "title": "BTCB",
+            "symbol": "BTCB",
+            "type": "BEP20",
+            "address": "0x6ce8dA28E2f864420840cF74474eFf5fD80E65B8",
+            "logo": "https://app.xchainer.io/assets/coins/sxp.png"
+          },
+          {
+            "id": "ont",
+            "title": "ETH",
+            "symbol": "ETH",
+            "type": "BEP20",
+            "address": "0xd66c6B4F0be8CE5b39D52E0Fd1344c389929B378",
+            "logo": "https://app.xchainer.io/assets/coins/ceth.png"
+          },
+          {
+            "id": "sxp",
+            "title": "XRP",
+            "symbol": "XRP",
+            "type": "BEP20",
+            "address": "0xa83575490D7df4E2F47b7D38ef351a2722cA45b9",
+            "logo": "https://app.xchainer.io/assets/coins/frax.png"
+          },
+          {
+            "id": "btt",
+            "title": "BitTorrent",
+            "symbol": "BTT",
+            "type": "BEP20",
+            "address": "0x343775CFdba81F9231395Bfb217EDF6D509D973b",
+            "logo": "https://app.xchainer.io/assets/coins/btt.png"
+          }
+        ]
+      },
+      {
+        "id": "ethereum",
+        "title": "Ethereum",
+        "symbol": "ETH",
+        "type": "coin",
+        "logo": "https://app.xchainer.io/assets/coins/eth.png",
+        "tokens": [
+          {
+            "id": "usd-coin",
+            "title": "goerli USDC",
+            "symbol": "USDC",
+            "type": "ERC20",
+            "address": "0xeea85fdf0b05d1e0107a61b4b4db1f345854b952",
+            "logo": "https://app.xchainer.io/assets/coins/usdc.png"
+          },
+          {
+            "id": "usdt",
+            "title": "goerli USDT",
+            "symbol": "USDT",
+            "type": "ERC20",
+            "address": "0xfb7378d0997b0092be6bbf278ca9b8058c24752f",
+            "logo": "https://app.xchainer.io/assets/coins/usdt.png"
+          },
+          {
+            "id": "usdc",
+            "title": "USD Coin",
+            "symbol": "USDC",
+            "type": "ERC20",
+            "address": "0x98339D8C260052B7ad81c28c16C0b98420f2B46a",
+            "logo": "https://app.xchainer.io/assets/coins/usdd.png"
+          },
+          {
+            "id": "magic-internet-money",
+            "title": "Maveric",
+            "symbol": "MAV",
+            "type": "ERC20",
+            "address": "0x8Da04634564355B56DD8fA8a03B27f34D4cF8eBd",
+            "logo": "https://app.xchainer.io/assets/coins/mim.png"
+          },
+          {
+            "id": "mana",
+            "title": "HOP",
+            "symbol": "HOP",
+            "type": "ERC20",
+            "address": "0x7191061D5d4C60f598214cC6913502184BAddf18",
+            "logo": "https://app.xchainer.io/assets/coins/iota.png"
+          }
+        ]
+      },
+      {
+        "id": "tron",
+        "title": "Tron",
+        "symbol": "TRX",
+        "type": "coin",
+        "logo": "https://app.xchainer.io/assets/coins/trxcoin.png",
+        "tokens": [
+          {
+            "id": "tether-trc20",
+            "title": "Tether USD",
+            "symbol": "USDT-TRC20",
+            "type": "TRC20",
+            "address": "TXLAQ63Xg1NAzckPwKHvzw7CSEmLMEqcdj",
+            "logo": "https://app.xchainer.io/assets/coins/usdt.png"
+          },
+          {
+            "id": "btt-trc20",
+            "title": "BitTorrent",
+            "symbol": "BTT",
+            "type": "TRC20",
+            "address": "TNuoKL1ni8aoshfFL1ASca1Gou9RXwAzfn",
+            "logo": "https://app.xchainer.io/assets/coins/btt.png"
+          },
+          {
+            "id": "jst-trc20",
+            "title": "JST GOV",
+            "symbol": "JST",
+            "type": "TRC20",
+            "address": "TF17BgPaZYbz8oxbjhriubPDsA7ArKoLX3",
+            "logo": "https://app.xchainer.io/assets/coins/bat.png"
+          },
+          {
+            "id": "udsj-trc20",
+            "title": "JUST Stablecoin",
+            "symbol": "USDJ",
+            "type": "TRC20",
+            "address": "TLBaRhANQoJFTqre9Nf1mjuwNWjCJeYqUL",
+            "logo": "https://app.xchainer.io/assets/coins/usdd.png"
+          },
+          {
+            "id": "win-trc20",
+            "title": "WINK",
+            "symbol": "WIN",
+            "type": "TRC20",
+            "address": "TU2T8vpHZhCNY8fXGVaHyeZrKm8s6HEXWe",
+            "logo": "https://app.xchainer.io/assets/coins/sand.png"
+          }
+        ]
+      }
+    ]
   }
 }
