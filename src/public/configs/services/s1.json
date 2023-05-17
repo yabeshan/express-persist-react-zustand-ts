@@ -1,3 +1,9 @@
 {
-  "api": "1"
+  "ETH_CONFIG": {
+    "node": {
+      "fullNode": "https://goerli.infura.io/v3/32e3947da90c4544b5fda4052c31068b",
+      "api": "https://api-goerli.etherscan.io/",
+      "explorer": "https://goerli.etherscan.io/"
+    }
+  }
 }

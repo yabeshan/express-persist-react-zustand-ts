@@ -7,6 +7,7 @@ type TAppStore = {
   config: string
   configAssetSelected: number
   configApiSelected: number
+  configTuneinSelected: number
   configErrorFlag: boolean
 
   init(): void
@@ -18,6 +19,7 @@ type TAppStore = {
   saveConfig(): void
   updateAsset(data: any): void
   updateApi(data: any): void
+  updateTunein(data: any): void
   updateErrorFlag(data: any): void
 }
 
@@ -27,6 +29,7 @@ export const appStore = create<TAppStore>((set, get) => ({
   config: 'config',
   configAssetSelected: 1,
   configApiSelected: 1,
+  configTuneinSelected: 1,
   configErrorFlag: false,
 
   init: async () => {
@@ -106,6 +109,7 @@ export const appStore = create<TAppStore>((set, get) => ({
         "version": get().version,
         "assets": get().configAssetSelected,
         "api": get().configApiSelected,
+        "tunein": get().configTuneinSelected,
         "errorFlag": get().configErrorFlag,
       }
       const res = await axios.post('api/config/save', config)
@@ -129,6 +133,12 @@ export const appStore = create<TAppStore>((set, get) => ({
   updateApi: (data) => {
     set({ 
       configApiSelected: data.target.value
+    })
+  },
+
+  updateTunein: (data) => {
+    set({ 
+      configTuneinSelected: data.target.value
     })
   },
 

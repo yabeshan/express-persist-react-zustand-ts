@@ -30,19 +30,28 @@ export default function Page() {
       <div onChange={store.updateAsset} style={{padding:5}}>
         <b>Assets = &nbsp;</b>
         <label>
-          <input type="radio" value="1" name="assets" defaultChecked /> asset 1
+          <input type="radio" value="1" name="assets" defaultChecked /> all asset testnet (27)
         </label>
         <label>
-          <input type="radio" value="2" name="assets" /> asset 2
+          <input type="radio" value="2" name="assets" /> ETH asset testnet (6)
         </label>
       </div>
       <div onChange={store.updateApi} style={{padding:5}}>
         <b>API = &nbsp;</b>
         <label>
-          <input type="radio" value="1" name="api" defaultChecked /> api 1
+          <input type="radio" value="1" name="api" defaultChecked /> api ETH goerli
         </label>
         <label>
-          <input type="radio" value="2" name="api" /> api 2
+          <input type="radio" value="2" name="api" /> api ETH sepolia
+        </label>
+      </div>
+      <div onChange={store.updateTunein} style={{padding:5}}>
+        <b>API = &nbsp;</b>
+        <label>
+          <input type="radio" value="1" name="tunein" defaultChecked /> 2 tabs
+        </label>
+        <label>
+          <input type="radio" value="2" name="tunein" /> 3 tabs (add notificationTab)
         </label>
       </div>
       <div onChange={store.updateErrorFlag} style={{padding:5}}>
