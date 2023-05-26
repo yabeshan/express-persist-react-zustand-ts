@@ -1,0 +1,79 @@
+{
+  "API_CONFIG": {
+    "prices": {
+      "coingecko": "https://api.coingecko.com/api/v3/simple/price",
+      "mostToken": "https://app.xchainer.io/api/rpc",
+      "amperToken": "https://tokenamper.com/api",
+      "ganaGoldToken": "https://ganagoldtoken.com/api"
+    },
+    "unicall": {
+      "growthGasLimitByPercent": "150"
+    },
+    "airdrop": {
+      "scipay" : "https://scipay.club/api"
+    },
+    "clipboard": {
+      "api": "https://clipboard.most.online/api/rpc"
+    },
+    "rdn": {
+      "redeemTokenEnabled": "true",
+      "method": "getTokenByAddress",
+      "contract": "0x4E0377D0b0Ac681cc0143379b6c065F23787daDD"
+    }
+  },
+  "BTC_CONFIG": {
+    "minimumAmount": "0.0000029",
+    "node": {
+      "api": "https://app.xchainer.io/api/rpc",
+      "explorer": "https://www.blockchain.com/"
+    }
+  },
+  "BSC_CONFIG": {
+    "growthGasLimitByPercent": "150",
+    "node": {
+      "fullNode": "https://bsc-dataseed.binance.org/",
+      "api": "https://app.xchainer.io/api/rpc",
+      "explorer": "https://bscscan.com/",
+      "pancakeSwapContract": "0x10ED43C718714eb63d5aA57B78B54704E256024E"
+    }
+  },
+  "ETH_CONFIG": {
+    "growthGasLimitByPercent": "150",
+    "node": {
+      "fullNode": "https://mainnet.infura.io/v3/75ee14a9e53b4a848b55c650fe93010a",
+      "api": "https://app.xchainer.io/api/rpc",
+      "explorer": "https://etherscan.io/",
+      "uniSwapContract": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+    }
+  },
+  "TRON_CONFIG": {
+    "minimumAmount": "0.000001",
+    "unVisibleTxsByType": [
+      "FreezeBalanceContract",
+      "VoteWitnessContract",
+      "TransferAssetContract",
+      "TriggerSmartContract",
+      "ProposalCreateContract",
+      "ProposalApproveContract",
+      "ProposalDeleteContract",
+      "AccountPermissionUpdateContract"
+    ],
+    "node":{
+      "fullNode": "https://api.trongrid.io",
+      "solidityNode": "https://api.trongrid.io",
+      "eventServer": "https://api.trongrid.io",
+      "explorer": "https://tronscan.org/#",
+      "api": "https://api.trongrid.io/v1",
+      "sunSwapContract": "TXk8rQSAvPvBBNtqSoY6nCfsXWCSSpTVQF"
+    },
+    "needBandwidthNew": 345,
+    "needBandwidthNewTRX": 100000,
+    "needBandwidthUsed": 345,
+    "needBandwidthUsedTRX": 267,
+    "priceBandwidth": 1000,
+    "needEnergyNew": 64895,
+    "needEnergyUsed": 31895,
+    "priceEnergy": 420,
+    "priceActivateTRX": 1000000
+  }
+}

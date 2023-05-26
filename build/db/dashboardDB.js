@@ -1,5 +1,5 @@
 import storage from 'node-persist';
-const MIN_VERSION = 1;
+const MIN_VERSION = Number(process.env.VERSION) || 1;
 const MAX_LOGS = 5;
 await storage.init();
 await storage.setItem('version', MIN_VERSION);

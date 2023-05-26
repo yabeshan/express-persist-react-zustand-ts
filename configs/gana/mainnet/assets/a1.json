@@ -1,0 +1,183 @@
+{
+  "config": {
+    "startEnabledAssetsId": []
+  },
+  "assets": [
+    {
+      "id": "binancecoin",
+      "title": "Smart Chain",
+      "symbol": "BNB",
+      "type": "coin",
+      "logo": "https://app.xchainer.io/assets/coins/bnb.png",
+      "tokens": [
+        {
+          "id": "ghanaGold",
+          "title": "Ghana GOLD Token",
+          "symbol": "GOLD",
+          "type": "BEP20",
+          "address": "0xa10e719B609FDBe297c47981AED723d252D81ca6",
+          "logo": "tokens :: ghana"
+        },{
+          "id": "tether",
+          "title": "USDT",
+          "symbol": "PBSC-USD",
+          "type": "BEP20",
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "logo": "https://app.xchainer.io/assets/coins/usdt.png"
+        },
+        {
+          "id": "binance-usd",
+          "title": "BUSD",
+          "symbol": "BSC-USD",
+          "type": "BEP20",
+          "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+          "logo": "https://app.xchainer.io/assets/coins/busd.png"
+        },
+        {
+          "id": "usdc-bsc",
+          "title": "USD Coin",
+          "symbol": "USDC-BEP20",
+          "type": "BEP20",
+          "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+          "logo": "https://app.xchainer.io/assets/coins/usdc.png"
+        },
+        {
+          "id": "dai",
+          "title": "Binance-Peg Dai Token",
+          "symbol": "DAI",
+          "type": "BEP20",
+          "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+          "logo": "https://app.xchainer.io/assets/coins/dai.png?qwe"
+        },
+            {
+          "id": "ever",
+          "title": "Everscale",
+          "symbol": "EVER",
+          "type": "BEP20",
+          "address": "0x0a7e7d210c45c4abba183c1d0551b53ad1756eca",
+          "logo": "https://app.xchainer.io/assets/coins/ever.png"
+        },
+            {
+          "id": "matic",
+          "title": "Matic Token",
+          "symbol": "MATIC",
+          "type": "BEP20",
+          "address": "0xcc42724c6683b7e57334c4e856f4c9965ed682bd",
+          "logo": "https://app.xchainer.io/assets/coins/matic.png"
+        },
+            {
+          "id": "chainlink",
+          "title": "Chainlink",
+          "symbol": "LINK",
+          "type": "BEP20",
+          "address": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd",
+          "logo": "https://app.xchainer.io/assets/coins/link.png"
+        },
+            {
+          "id": "atom",
+          "title": "Cosmos",
+          "symbol": "ATOM",
+          "type": "BEP20",
+          "address": "0x0eb3a705fc54725037cc9e008bdede697f62f335",
+          "logo": "https://app.xchainer.io/assets/coins/atom.png"
+        },
+            {
+          "id": "uni",
+          "title": "Uniswap",
+          "symbol": "UNI",
+          "type": "BEP20",
+          "address": "0xbf5140a22578168fd562dccf235e5d43a02ce9b1",
+          "logo": "https://app.xchainer.io/assets/coins/uni.png"
+        },
+            {
+          "id": "axs",
+          "title": "Axie Infinity",
+          "symbol": "AXS",
+          "type": "BEP20",
+          "address": "0x715d400f88c167884bbcc41c5fea407ed4d2f8a0",
+          "logo": "https://app.xchainer.io/assets/coins/axs.png"
+        },  
+        {
+          "id": "aave",
+          "title": "Aave",
+          "symbol": "AAVE",
+          "type": "BEP20",
+          "address": "0xfb6115445bff7b52feb98650c87f44907e58f802",
+          "logo": "https://app.xchainer.io/assets/coins/aave.png"
+        },
+        {
+          "id": "frax",
+          "title": "Frax",
+          "symbol": "FRAX",
+          "type": "BEP20",
+          "address": "0x90c97f71e18723b0cf0dfa30ee176ab653e89f40",
+          "logo": "https://app.xchainer.io/assets/coins/frax.png"
+        },
+        {
+          "id": "tusd",
+          "title": "TrueUSD",
+          "symbol": "TUSD",
+          "type": "BEP20",
+          "address": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+          "logo": "https://app.xchainer.io/assets/coins/tusd.png"
+        },
+        {
+          "id": "dfi",
+          "title": "DeFiChain",
+          "symbol": "DFI",
+          "type": "BEP20",
+          "address": "0x361c60b7c2828fcab80988d00d1d542c83387b50",
+          "logo": "https://app.xchainer.io/assets/coins/dfi.png"
+        },
+        {
+          "id": "twt",
+          "title": "Trust Wallet Token",
+          "symbol": "TWT",
+          "type": "BEP20",
+          "address": "0x4b0f1812e5df2a09796481ff14017e6005508003",
+          "logo": "https://app.xchainer.io/assets/coins/twt.png"
+        },
+        {
+          "id": "ftm",
+          "title": "Fantom",
+          "symbol": "FTM",
+          "type": "BEP20",
+          "address": "0xad29abb318791d579433d831ed122afeaf29dcfe",
+          "logo": "https://app.xchainer.io/assets/coins/ftm.png"
+        },
+        {
+          "id": "zil",
+          "title": "Zilliqa",
+          "symbol": "ZIL",
+          "type": "BEP20",
+          "address": "0xb86abcb37c3a4b64f74f59301aff131a1becc787",
+          "logo": "https://app.xchainer.io/assets/coins/zil.png"
+        },
+        {
+          "id": "pancakeswap-token",
+          "title": "PancakeSwap",
+          "symbol": "CAKE",
+          "type": "BEP20",
+          "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+          "logo": "https://app.xchainer.io/assets/coins/cake.png"
+        },
+            {
+          "id": "btt",
+          "title": "BitTorrent-New",
+          "symbol": "BTT",
+          "type": "BEP20",
+          "address": "0x352Cb5E19b12FC216548a2677bD0fce83BaE434B",
+          "logo": "https://app.xchainer.io/assets/coins/btt.png"
+        },
+            {
+          "id": "ltc",
+          "title": "Litecoin",
+          "symbol": "LTC",
+          "type": "BEP20",
+          "address": "0x4338665cbb7b2485a8855a139b75d5e34ab0db94",
+          "logo": "https://app.xchainer.io/assets/coins/ltc.png"
+        }
+      ]
+    }    
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "API_CONFIG": {
+    "prices": {
+      "coingecko": "https://api.coingecko.com/api/v3/simple/price",
+      "mostToken": "https://app.xchainer.io/api/rpc",
+      "amperToken": "https://tokenamper.com/api",
+      "ganaGoldToken": "https://ganagoldtoken.com/api"
+    },
+    "unicall": {
+      "growthGasLimitByPercent": "150"
+    },
+    "clipboard": {
+      "api": "https://clipboardtest.most.online/api/rpc"
+    }
+  },
+
+  "BSC_CONFIG": {
+    "growthGasLimitByPercent": "150",
+    "node": {
+      "fullNode": "https://data-seed-prebsc-1-s1.binance.org:8545/",
+      "api": "https://test.xchainer.io/api/rpc",
+      "explorer": "https://testnet.bscscan.com/",
+      "pancakeSwapContract": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1"
+    }
+  }
+}
