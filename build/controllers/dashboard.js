@@ -40,6 +40,18 @@ export const versionDecrement = async (req, res) => {
         });
     }
 };
+export const getLast = async (req, res) => {
+    try {
+        const data = await fs.promises.readFile(global.__dirname + `/public/configs/last.json`);
+        const config = JSON.parse(data);
+        return res.status(200).json(config);
+    }
+    catch (err) {
+        res.status(500).json({
+            message: "controllers-api-getConfig error message :: " + err.message
+        });
+    }
+};
 export const getConfig = async (req, res) => {
     try {
         const errorFlag = await getErrorFlag();

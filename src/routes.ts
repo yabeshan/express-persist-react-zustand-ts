@@ -7,6 +7,7 @@ import {
   versionIncrement, 
   versionDecrement,
   getConfig,
+  getLast,
   saveConfig,
   getLogs,
 } from './controllers/dashboard.js'
@@ -20,6 +21,7 @@ if (!global.__dirname || global.__filename) {
 const router = Router();
 
 router.post("/api/config", getConfig);
+router.post("/api/last", getLast);
 router.post("/api/logs", getLogs);
 
 

@@ -1,13 +1,14 @@
 import express, { Router } from "express";
 import path from "path";
 import fs from "fs";
-import { getVersion, versionIncrement, versionDecrement, getConfig, saveConfig, getLogs, } from './controllers/dashboard.js';
+import { getVersion, versionIncrement, versionDecrement, getConfig, getLast, saveConfig, getLogs, } from './controllers/dashboard.js';
 import fileDirName from "./utils/file-dir-name.js";
 if (!global.__dirname || global.__filename) {
     fileDirName(import.meta);
 }
 const router = Router();
 router.post("/api/config", getConfig);
+router.post("/api/last", getLast);
 router.post("/api/logs", getLogs);
 if (process.env.ADMIN) {
     router.post("/api/version", getVersion);
