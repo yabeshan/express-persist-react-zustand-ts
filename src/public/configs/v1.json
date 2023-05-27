@@ -1,0 +1,136 @@
+{
+  "version": "1",
+  "tunein": {
+    "NotificationTab": false,
+    "TerminalTab": true
+  },
+  "api": {
+    "API_CONFIG": {
+      "prices": {
+        "coingecko": "https://api.coingecko.com/api/v3/simple/price",
+        "mostToken": "https://app.xchainer.io/api/rpc",
+        "amperToken": "https://tokenamper.com/api",
+        "ganaGoldToken": "https://ganagoldtoken.com/api"
+      },
+      "unicall": {
+        "growthGasLimitByPercent": "150"
+      },
+      "clipboard": {
+        "api": "https://clipboardtest.most.online/api/rpc"
+      }
+    },
+    "BSC_CONFIG": {
+      "growthGasLimitByPercent": "150",
+      "node": {
+        "fullNode": "https://data-seed-prebsc-1-s1.binance.org:8545/",
+        "api": "https://test.xchainer.io/api/rpc",
+        "explorer": "https://testnet.bscscan.com/",
+        "pancakeSwapContract": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1"
+      }
+    }
+  },
+  "assets": {
+    "config": {
+      "startEnabledAssetsId": []
+    },
+    "assets": [
+      {
+        "id": "binancecoin",
+        "title": "Smart Chain",
+        "symbol": "BNB",
+        "type": "coin",
+        "logo": "https://app.xchainer.io/assets/coins/bnb.png",
+        "tokens": [
+          {
+            "id": "ghanaGold",
+            "title": "Ghana GOLD Token",
+            "symbol": "GOLD",
+            "type": "BEP20",
+            "address": "0x774705956B558DC9DEc8e1E1f5E5d807d9ca3762",
+            "logo": "tokens :: ghana"
+          },
+          {
+            "id": "tkn1",
+            "title": "Token 1",
+            "symbol": "TKN1",
+            "type": "BEP20",
+            "address": "0x8F67e0f2EF34a528DFbd99912929727309366189",
+            "logo": "tokens :: bep20"
+          },
+          {
+            "id": "tkn2",
+            "title": "Token 2",
+            "symbol": "TKN2",
+            "type": "BEP20",
+            "address": "0x989fb489ABDae09244D461aC371Ae24DD7b1f9c8",
+            "logo": "tokens :: bep20"
+          },
+          {
+            "id": "tether",
+            "title": "Tether USDT",
+            "symbol": "PBSC-USD",
+            "type": "BEP20",
+            "address": "0x337610d27c682E347C9cD60BD4b3b107C9d34dDd",
+            "logo": "https://app.xchainer.io/assets/coins/usdt.png"
+          },
+          {
+            "id": "binance-usd",
+            "title": "BUSD",
+            "symbol": "BSC-USD",
+            "type": "BEP20",
+            "address": "0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee",
+            "logo": "https://app.xchainer.io/assets/coins/busd.png"
+          },
+          {
+            "id": "dai",
+            "title": "Binance Dai",
+            "symbol": "DAI",
+            "type": "BEP20",
+            "address": "0xEC5dCb5Dbf4B114C9d0F65BcCAb49EC54F6A0867",
+            "logo": "https://app.xchainer.io/assets/coins/dai.png"
+          },
+          {
+            "id": "usdc-bsc",
+            "title": "USD Coin",
+            "symbol": "USDC",
+            "type": "BEP20",
+            "address": "0x64544969ed7EBf5f083679233325356EbE738930",
+            "logo": "https://app.xchainer.io/assets/coins/usdc.png"
+          },
+          {
+            "id": "ltc",
+            "title": "BTCB",
+            "symbol": "BTCB",
+            "type": "BEP20",
+            "address": "0x6ce8dA28E2f864420840cF74474eFf5fD80E65B8",
+            "logo": "https://app.xchainer.io/assets/coins/sxp.png"
+          },
+          {
+            "id": "ont",
+            "title": "ETH",
+            "symbol": "ETH",
+            "type": "BEP20",
+            "address": "0xd66c6B4F0be8CE5b39D52E0Fd1344c389929B378",
+            "logo": "https://app.xchainer.io/assets/coins/ceth.png"
+          },
+          {
+            "id": "sxp",
+            "title": "XRP",
+            "symbol": "XRP",
+            "type": "BEP20",
+            "address": "0xa83575490D7df4E2F47b7D38ef351a2722cA45b9",
+            "logo": "https://app.xchainer.io/assets/coins/frax.png"
+          },
+          {
+            "id": "btt",
+            "title": "BitTorrent",
+            "symbol": "BTT",
+            "type": "BEP20",
+            "address": "0x343775CFdba81F9231395Bfb217EDF6D509D973b",
+            "logo": "https://app.xchainer.io/assets/coins/btt.png"
+          }
+        ]
+      }
+    ]
+  }
+}
