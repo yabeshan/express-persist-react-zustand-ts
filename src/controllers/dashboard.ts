@@ -10,6 +10,14 @@ import {
   decrementVers,
   getAllLogs, 
   addLog,
+  getFixBuildNumber,
+  setFixBuildNumber,
+  getStartEnabledAssetsId,
+  setStartEnabledAssetsId,
+  getForceVisibleAssetsId,
+  setForceVisibleAssetsId,
+  getForceUnvisibleAssetsId,
+  setForceUnvisibleAssetsId,
 } from "../db/dashboardDB.js"
 
 export const getVersion = async (
@@ -96,14 +104,32 @@ export const getConfig = async (
       });  
     }
 
+    const data: any = await fs.promises.readFile(global.__dirname + `/public/configs/v${v}.json`)
+    const config = JSON.parse(data);
+    // console.log('____getConfig___', v, JSON.stringify(config) )
+
+    const buildNumber = await getFixBuildNumber();
+    if (buildNumber>0) {
+      if ( Number(buildNumber) < Number(req.body.buildNumber) ) {
+        const startEnabledAssetsId = await getStartEnabledAssetsId()
+        const forceVisibleAssetsId = await getForceVisibleAssetsId()
+        const forceUnvisibleAssetsId = await getForceUnvisibleAssetsId()
+
+        config.assets.config.startEnabledAssetsId = startEnabledAssetsId;
+        config.assets.config.forceVisibleAssetsId = forceVisibleAssetsId;
+        config.assets.config.forceUnvisibleAssetsId = forceUnvisibleAssetsId;
+            
+        return res.status(200).json( config );  
+      } else {
+        return res.status(200).json({});  
+      }
+    }
+
     if (req.body.version && req.body.version==v) {
       addLog(req.body, 'Correct version')
       return res.status(200).json({});  
     }
     
-    const data: any = await fs.promises.readFile(global.__dirname + `/public/configs/v${v}.json`)
-    const config = JSON.parse(data);
-    // console.log('____getConfig___', v, JSON.stringify(config) )
     if (!req.body.log || req.body.log != 'disabled' ) {
       addLog(req.body, config)
     }
@@ -121,10 +147,17 @@ export const saveConfig = async (
   res: Response
 ) => {
   try {
-    const { version, assets, api, tunein, errorFlag } = req.body;
+    const { 
+      version, assets, api, tunein, errorFlag, configFixBuildNumber,
+      startEnabledAssetsId, forceVisibleAssetsId, forceUnvisibleAssetsId
+    } = req.body;
     await setVers(version)
     await setErrorFlag(errorFlag)
-    // console.log('__start save config__', req.body, version, assets, api )
+    await setFixBuildNumber(configFixBuildNumber)
+    await setStartEnabledAssetsId(startEnabledAssetsId)
+    await setForceVisibleAssetsId(forceVisibleAssetsId)
+    await setForceUnvisibleAssetsId(forceUnvisibleAssetsId)
+    // console.log('__start save config__', req.body, version, assets, api, configFixBuildNumber )
     let data: any = await fs.promises.readFile(global.__dirname + `/public/configs/assets/a${assets}.json`)
     const assetConfig = JSON.parse(data);
     data = await fs.promises.readFile(global.__dirname + `/public/configs/services/s${api}.json`)

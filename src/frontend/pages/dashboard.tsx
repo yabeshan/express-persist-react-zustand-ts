@@ -26,7 +26,45 @@ export default function Page() {
         <button onClick={store.decrementVers}>-</button> &nbsp; 
         {store.version} &nbsp; 
         <button onClick={store.incrementVers}>+</button> &nbsp; 
-      </div>     
+      </div>
+      <div onChange={store.updateFixBuildNumber} style={{padding:5}}>
+        <b>Minimal build number = &nbsp;</b>
+        <label>
+          <input type="radio" value="0" name="buildNumber" defaultChecked /> 0
+        </label>
+        <label>
+          <input type="radio" value="555" name="buildNumber" /> 555
+        </label>
+      </div>
+
+      <div onChange={store.updateStartEnabledAssetsId} style={{padding:5}}>
+        <b>startEnabledAssetsId = &nbsp;</b>
+        <label>
+          <input type="radio" value="0" name="StartEnabledAssetsId" defaultChecked /> []
+        </label>
+        <label>
+          <input type="radio" value="1" name="StartEnabledAssetsId" /> usdt, usdc
+        </label>
+      </div>
+      <div onChange={store.updateForceVisibleAssetsId} style={{padding:5}}>
+        <b>forceVisibleAssetsId  = &nbsp;</b>
+        <label>
+          <input type="radio" value="0" name="ForceVisibleAssetsId" defaultChecked /> []
+        </label>
+        <label>
+          <input type="radio" value="1" name="ForceVisibleAssetsId" /> usdt, usdc
+        </label>
+      </div>
+      <div onChange={store.updateForceUnvisibleAssetsId} style={{padding:5}}>
+        <b>forceUnvisibleAssetsId = &nbsp;</b>
+        <label>
+          <input type="radio" value="0" name="ForceUnvisibleAssetsId" defaultChecked /> []
+        </label>
+        <label>
+          <input type="radio" value="1" name="ForceUnvisibleAssetsId" /> usdt, usdc
+        </label>
+      </div>
+
       <div onChange={store.updateAsset} style={{padding:5}}>
         <b>Assets = &nbsp;</b>
         <label>

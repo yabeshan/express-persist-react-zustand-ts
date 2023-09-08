@@ -9,6 +9,10 @@ type TAppStore = {
   configApiSelected: number
   configTuneinSelected: number
   configErrorFlag: boolean
+  configFixBuildNumber: number
+  startEnabledAssetsId: any
+  forceVisibleAssetsId: any
+  forceUnvisibleAssetsId: any
 
   init(): void
   getVersion(): void
@@ -21,6 +25,10 @@ type TAppStore = {
   updateApi(data: any): void
   updateTunein(data: any): void
   updateErrorFlag(data: any): void
+  updateFixBuildNumber(data: any): void
+  updateStartEnabledAssetsId(data: any): void
+  updateForceVisibleAssetsId(data: any): void
+  updateForceUnvisibleAssetsId(data: any): void
 }
 
 export const appStore = create<TAppStore>((set, get) => ({
@@ -31,6 +39,10 @@ export const appStore = create<TAppStore>((set, get) => ({
   configApiSelected: 1,
   configTuneinSelected: 1,
   configErrorFlag: false,
+  configFixBuildNumber: 0,
+  startEnabledAssetsId: [],
+  forceVisibleAssetsId: [],
+  forceUnvisibleAssetsId: [],
 
   init: async () => {
     get().getVersion()
@@ -111,6 +123,10 @@ export const appStore = create<TAppStore>((set, get) => ({
         "api": get().configApiSelected,
         "tunein": get().configTuneinSelected,
         "errorFlag": get().configErrorFlag,
+        "configFixBuildNumber": get().configFixBuildNumber,
+        "startEnabledAssetsId": get().startEnabledAssetsId,
+        "forceVisibleAssetsId": get().forceVisibleAssetsId,
+        "forceUnvisibleAssetsId": get().forceUnvisibleAssetsId,
       }
       const res = await axios.post('api/config/save', config)
       console.log('___store api/saveConfig res___', res.data, res )
@@ -145,6 +161,30 @@ export const appStore = create<TAppStore>((set, get) => ({
   updateErrorFlag: (data) => {
     set({ 
       configErrorFlag: data.target.value==2
+    })
+  },
+
+  updateFixBuildNumber: (data) => {
+    set({
+      configFixBuildNumber: data.target.value
+    })
+  },
+
+  updateStartEnabledAssetsId: (data) => {
+    set({
+      startEnabledAssetsId: data.target.value==0 ? [] : ['usdt', 'usdc']
+    })
+  },
+
+  updateForceVisibleAssetsId: (data) => {
+    set({
+      forceVisibleAssetsId: data.target.value==0 ? [] : ['usdt', 'usdc']
+    })
+  },
+
+  updateForceUnvisibleAssetsId: (data) => {
+    set({
+      forceUnvisibleAssetsId: data.target.value==0 ? [] : ['usdt', 'usdc']
     })
   }
 

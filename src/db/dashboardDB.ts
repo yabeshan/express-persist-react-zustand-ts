@@ -7,6 +7,10 @@ await storage.init();
 await storage.setItem('version', MIN_VERSION)
 await storage.setItem('logs', [])
 await storage.setItem('errorFlag', false)
+await storage.setItem('configFixBuildNumber', 0)
+await storage.setItem('startEnabledAssetsId', [])
+await storage.setItem('forceVisibleAssetsId', [])
+await storage.setItem('forceUnvisibleAssetsId', [])
 
 export const getErrorFlag = async () => {
   const flag = await storage.getItem('errorFlag')
@@ -58,4 +62,44 @@ export const addLog = async (req: any, res: any) => {
     logs.pop()
   }
   await storage.setItem('logs', logs)
+}
+
+export const getFixBuildNumber = async () => {
+  const build = await storage.getItem('configFixBuildNumber')
+  return build
+}
+
+export const setFixBuildNumber = async (v: any) => {
+  await storage.setItem('configFixBuildNumber', v)
+  return v
+}
+
+export const getStartEnabledAssetsId = async () => {
+  const build = await storage.getItem('startEnabledAssetsId')
+  return build
+}
+
+export const setStartEnabledAssetsId = async (v: any) => {
+  await storage.setItem('startEnabledAssetsId', v)
+  return v
+}
+
+export const getForceVisibleAssetsId = async () => {
+  const build = await storage.getItem('forceVisibleAssetsId')
+  return build
+}
+
+export const setForceVisibleAssetsId = async (v: any) => {
+  await storage.setItem('forceVisibleAssetsId', v)
+  return v
+}
+
+export const getForceUnvisibleAssetsId = async () => {
+  const build = await storage.getItem('forceUnvisibleAssetsId')
+  return build
+}
+
+export const setForceUnvisibleAssetsId = async (v: any) => {
+  await storage.setItem('forceUnvisibleAssetsId', v)
+  return v
 }

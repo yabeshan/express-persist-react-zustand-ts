@@ -1,6 +1,8 @@
 {
   "config": {
-    "startEnabledAssetsId": []
+    "startEnabledAssetsId": [],
+    "forceVisibleAssetsId": [],
+    "forceUnvisibleAssetsId": []
   },
   "assets": [
     {

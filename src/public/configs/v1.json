@@ -1,87 +1,16 @@
 {
-  "version": "1",
+  "version": 1,
   "tunein": {
     "NotificationTab": false,
     "TerminalTab": false
   },
   "api": {
-    "API_CONFIG": {
-      "prices": {
-        "coingecko": "https://api.coingecko.com/api/v3/simple/price",
-        "mostToken": "https://app.xchainer.io/api/rpc",
-        "amperToken": "https://tokenamper.com/api",
-        "ganaGoldToken": "https://ganagoldtoken.com/api"
-      },
-      "unicall": {
-        "growthGasLimitByPercent": "150"
-      },
-      "airdrop": {
-        "scipay": "https://scipay.club/api"
-      },
-      "clipboard": {
-        "api": "https://clipboardtest.most.online/api/rpc"
-      },
-      "rdn": {
-        "redeemTokenEnabled": "true",
-        "method": "getTokenByAddress",
-        "contract": "0x36AD17070546CAB7BcCFecbe1e8DBC45DE933191"
-      }
-    },
-    "BTC_CONFIG": {
-      "minimumAmount": "0.0000029",
-      "node": {
-        "api": "https://api.blockcypher.com/v1",
-        "explorer": "https://sochain.com/"
-      }
-    },
-    "BSC_CONFIG": {
-      "growthGasLimitByPercent": "150",
-      "node": {
-        "fullNode": "https://data-seed-prebsc-1-s1.binance.org:8545/",
-        "api": "https://test.xchainer.io/api/rpc",
-        "explorer": "https://testnet.bscscan.com/",
-        "pancakeSwapContract": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1"
-      }
-    },
     "ETH_CONFIG": {
-      "growthGasLimitByPercent": "150",
       "node": {
         "fullNode": "https://goerli.infura.io/v3/32e3947da90c4544b5fda4052c31068b",
         "api": "https://api-goerli.etherscan.io/",
-        "apiKey": "3AKN7KG21Y38S5S7RU3DX3RT9EKNYT8ZFM",
-        "explorer": "https://goerli.etherscan.io/",
-        "uniSwapContract": ""
+        "explorer": "https://goerli.etherscan.io/"
       }
-    },
-    "TRON_CONFIG": {
-      "minimumAmount": "0.000001",
-      "unVisibleTxsByType": [
-        "FreezeBalanceContract",
-        "VoteWitnessContract",
-        "TransferAssetContract",
-        "TriggerSmartContract",
-        "ProposalCreateContract",
-        "ProposalApproveContract",
-        "ProposalDeleteContract",
-        "AccountPermissionUpdateContract"
-      ],
-      "node": {
-        "fullNode": "https://nile.trongrid.io",
-        "solidityNode": "https://nile.trongrid.io",
-        "eventServer": "https://nile.trongrid.io",
-        "explorer": "https://nile.tronscan.org/#",
-        "api": "https://nile.trongrid.io/v1",
-        "sunSwapContract": ""
-      },
-      "needBandwidthNew": 345,
-      "needBandwidthNewTRX": 100000,
-      "needBandwidthUsed": 345,
-      "needBandwidthUsedTRX": 267,
-      "priceBandwidth": 1000,
-      "needEnergyNew": 28430,
-      "needEnergyUsed": 13532,
-      "priceEnergy": 420,
-      "priceActivateTRX": 1000000
     }
   },
   "assets": {
