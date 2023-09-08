@@ -66,10 +66,14 @@ export const getConfig = async (req, res) => {
                 "message": 'Update application'
             });
         }
+        if (req.body.version && req.body.version == v) {
+            addLog(req.body, 'Correct version');
+            return res.status(200).json({});
+        }
         const data = await fs.promises.readFile(global.__dirname + `/public/configs/v${v}.json`);
         const config = JSON.parse(data);
         const buildNumber = await getFixBuildNumber();
-        if (buildNumber > 0) {
+        if (Number(buildNumber) > 0) {
             if (Number(buildNumber) < Number(req.body.buildNumber)) {
                 const startEnabledAssetsId = await getStartEnabledAssetsId();
                 const forceVisibleAssetsId = await getForceVisibleAssetsId();
@@ -82,10 +86,6 @@ export const getConfig = async (req, res) => {
             else {
                 return res.status(200).json({});
             }
-        }
-        if (req.body.version && req.body.version == v) {
-            addLog(req.body, 'Correct version');
-            return res.status(200).json({});
         }
         if (!req.body.log || req.body.log != 'disabled') {
             addLog(req.body, config);
