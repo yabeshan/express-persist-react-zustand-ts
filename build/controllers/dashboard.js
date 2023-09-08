@@ -1,5 +1,5 @@
 import fs from "fs";
-import { getVers, setVers, getErrorFlag, setErrorFlag, incrementVers, decrementVers, getAllLogs, addLog, } from "../db/dashboardDB.js";
+import { getVers, setVers, getErrorFlag, setErrorFlag, incrementVers, decrementVers, getAllLogs, addLog, getFixBuildNumber, setFixBuildNumber, getStartEnabledAssetsId, setStartEnabledAssetsId, getForceVisibleAssetsId, setForceVisibleAssetsId, getForceUnvisibleAssetsId, setForceUnvisibleAssetsId, } from "../db/dashboardDB.js";
 export const getVersion = async (req, res) => {
     try {
         const v = await getVers();
@@ -66,12 +66,27 @@ export const getConfig = async (req, res) => {
                 "message": 'Update application'
             });
         }
+        const data = await fs.promises.readFile(global.__dirname + `/public/configs/v${v}.json`);
+        const config = JSON.parse(data);
+        const buildNumber = await getFixBuildNumber();
+        if (buildNumber > 0) {
+            if (Number(buildNumber) < Number(req.body.buildNumber)) {
+                const startEnabledAssetsId = await getStartEnabledAssetsId();
+                const forceVisibleAssetsId = await getForceVisibleAssetsId();
+                const forceUnvisibleAssetsId = await getForceUnvisibleAssetsId();
+                config.assets.config.startEnabledAssetsId = startEnabledAssetsId;
+                config.assets.config.forceVisibleAssetsId = forceVisibleAssetsId;
+                config.assets.config.forceUnvisibleAssetsId = forceUnvisibleAssetsId;
+                return res.status(200).json(config);
+            }
+            else {
+                return res.status(200).json({});
+            }
+        }
         if (req.body.version && req.body.version == v) {
             addLog(req.body, 'Correct version');
             return res.status(200).json({});
         }
-        const data = await fs.promises.readFile(global.__dirname + `/public/configs/v${v}.json`);
-        const config = JSON.parse(data);
         if (!req.body.log || req.body.log != 'disabled') {
             addLog(req.body, config);
         }
@@ -86,9 +101,13 @@ export const getConfig = async (req, res) => {
 };
 export const saveConfig = async (req, res) => {
     try {
-        const { version, assets, api, tunein, errorFlag } = req.body;
+        const { version, assets, api, tunein, errorFlag, configFixBuildNumber, startEnabledAssetsId, forceVisibleAssetsId, forceUnvisibleAssetsId } = req.body;
         await setVers(version);
         await setErrorFlag(errorFlag);
+        await setFixBuildNumber(configFixBuildNumber);
+        await setStartEnabledAssetsId(startEnabledAssetsId);
+        await setForceVisibleAssetsId(forceVisibleAssetsId);
+        await setForceUnvisibleAssetsId(forceUnvisibleAssetsId);
         let data = await fs.promises.readFile(global.__dirname + `/public/configs/assets/a${assets}.json`);
         const assetConfig = JSON.parse(data);
         data = await fs.promises.readFile(global.__dirname + `/public/configs/services/s${api}.json`);
