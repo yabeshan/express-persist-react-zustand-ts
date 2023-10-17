@@ -52,7 +52,7 @@ export const appStore = create<TAppStore>((set, get) => ({
   
   getVersion: async () => {
     try {
-      const res = await axios.post('api/version')
+      const res = await axios.post('/api/version')
       console.log('___store api/version res___', res.data )
       set({ 
         version: res.data.version
@@ -66,7 +66,7 @@ export const appStore = create<TAppStore>((set, get) => ({
 
   incrementVers: async () => {
     try {
-      const res = await axios.post('api/version/increment')
+      const res = await axios.post('/api/version/increment')
       console.log('___store incrementVers/increment res___', res.data )
       set({ 
         version: res.data.version
@@ -80,7 +80,7 @@ export const appStore = create<TAppStore>((set, get) => ({
 
   decrementVers: async () => {
     try {
-      const res = await axios.post('api/version/decrement')
+      const res = await axios.post('/api/version/decrement')
       console.log('___store api/version/decrement res___', res.data )
       set({ 
         version: res.data.version
@@ -94,7 +94,7 @@ export const appStore = create<TAppStore>((set, get) => ({
 
   getLogs: async () => {
     try {
-      const res = await axios.post('api/logs')
+      const res = await axios.post('/api/logs')
       console.log('___store api/logs res___', res.data )
       set({ 
         logs: res.data
@@ -107,7 +107,7 @@ export const appStore = create<TAppStore>((set, get) => ({
       const config = {
         "log": "disabled"
       }
-      const res = await axios.post('api/config', config)
+      const res = await axios.post('/api/config', config)
       console.log('___store api/getConfig res___', res.data )
       set({ 
         config: JSON.stringify(res.data) 
@@ -128,7 +128,7 @@ export const appStore = create<TAppStore>((set, get) => ({
         "forceVisibleAssetsId": get().forceVisibleAssetsId,
         "forceUnvisibleAssetsId": get().forceUnvisibleAssetsId,
       }
-      const res = await axios.post('api/config/save', config)
+      const res = await axios.post('/api/config/save', config)
       console.log('___store api/saveConfig res___', res.data, res )
       set({ 
         config: (res.status==200) ? res.data : "error"
@@ -172,19 +172,19 @@ export const appStore = create<TAppStore>((set, get) => ({
 
   updateStartEnabledAssetsId: (data) => {
     set({
-      startEnabledAssetsId: data.target.value==0 ? [] : ['usdt', 'usdc']
+      startEnabledAssetsId: data.target.value==0 ? [] : ['mana', 'magic-internet-money']
     })
   },
 
   updateForceVisibleAssetsId: (data) => {
     set({
-      forceVisibleAssetsId: data.target.value==0 ? [] : ['usdt', 'usdc']
+      forceVisibleAssetsId: data.target.value==0 ? [] : ['mana', 'magic-internet-money']
     })
   },
 
   updateForceUnvisibleAssetsId: (data) => {
     set({
-      forceUnvisibleAssetsId: data.target.value==0 ? [] : ['usdt', 'usdc']
+      forceUnvisibleAssetsId: data.target.value==0 ? [] : ['mana', 'magic-internet-money']
     })
   }
 

@@ -160,6 +160,9 @@ export const saveConfig = async (
     // console.log('__start save config__', req.body, version, assets, api, configFixBuildNumber )
     let data: any = await fs.promises.readFile(global.__dirname + `/public/configs/assets/a${assets}.json`)
     const assetConfig = JSON.parse(data);
+    assetConfig.config.startEnabledAssetsId = startEnabledAssetsId
+    assetConfig.config.forceVisibleAssetsId = forceVisibleAssetsId
+    assetConfig.config.forceUnvisibleAssetsId = forceUnvisibleAssetsId
     data = await fs.promises.readFile(global.__dirname + `/public/configs/services/s${api}.json`)
     const apiConfig = JSON.parse(data);
     data = await fs.promises.readFile(global.__dirname + `/public/configs/tunein/t${tunein}.json`)

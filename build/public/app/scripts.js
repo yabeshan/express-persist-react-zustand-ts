@@ -27686,7 +27686,7 @@
     },
     getVersion: async () => {
       try {
-        const res = await axios_default.post("api/version");
+        const res = await axios_default.post("/api/version");
         console.log("___store api/version res___", res.data);
         set({
           version: res.data.version
@@ -27699,7 +27699,7 @@
     },
     incrementVers: async () => {
       try {
-        const res = await axios_default.post("api/version/increment");
+        const res = await axios_default.post("/api/version/increment");
         console.log("___store incrementVers/increment res___", res.data);
         set({
           version: res.data.version
@@ -27712,7 +27712,7 @@
     },
     decrementVers: async () => {
       try {
-        const res = await axios_default.post("api/version/decrement");
+        const res = await axios_default.post("/api/version/decrement");
         console.log("___store api/version/decrement res___", res.data);
         set({
           version: res.data.version
@@ -27725,7 +27725,7 @@
     },
     getLogs: async () => {
       try {
-        const res = await axios_default.post("api/logs");
+        const res = await axios_default.post("/api/logs");
         console.log("___store api/logs res___", res.data);
         set({
           logs: res.data
@@ -27738,7 +27738,7 @@
         const config = {
           "log": "disabled"
         };
-        const res = await axios_default.post("api/config", config);
+        const res = await axios_default.post("/api/config", config);
         console.log("___store api/getConfig res___", res.data);
         set({
           config: JSON.stringify(res.data)
@@ -27759,7 +27759,7 @@
           "forceVisibleAssetsId": get().forceVisibleAssetsId,
           "forceUnvisibleAssetsId": get().forceUnvisibleAssetsId
         };
-        const res = await axios_default.post("api/config/save", config);
+        const res = await axios_default.post("/api/config/save", config);
         console.log("___store api/saveConfig res___", res.data, res);
         set({
           config: res.status == 200 ? res.data : "error"
@@ -27797,17 +27797,17 @@
     },
     updateStartEnabledAssetsId: (data) => {
       set({
-        startEnabledAssetsId: data.target.value == 0 ? [] : ["usdt", "usdc"]
+        startEnabledAssetsId: data.target.value == 0 ? [] : ["mana", "magic-internet-money"]
       });
     },
     updateForceVisibleAssetsId: (data) => {
       set({
-        forceVisibleAssetsId: data.target.value == 0 ? [] : ["usdt", "usdc"]
+        forceVisibleAssetsId: data.target.value == 0 ? [] : ["mana", "magic-internet-money"]
       });
     },
     updateForceUnvisibleAssetsId: (data) => {
       set({
-        forceUnvisibleAssetsId: data.target.value == 0 ? [] : ["usdt", "usdc"]
+        forceUnvisibleAssetsId: data.target.value == 0 ? [] : ["mana", "magic-internet-money"]
       });
     }
   }));
@@ -27833,7 +27833,7 @@
         clearInterval(timer);
       };
     }, []);
-    return /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("h1", null, "App :: Dashboard page"), /* @__PURE__ */ import_react3.default.createElement("div", { style: { backgroundColor: "#CCCCCC", padding: 10, float: "left", width: "30%", minHeight: 500 } }, /* @__PURE__ */ import_react3.default.createElement("h3", null, "Config"), /* @__PURE__ */ import_react3.default.createElement("div", { style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "version = \xA0 "), /* @__PURE__ */ import_react3.default.createElement("button", { onClick: store.decrementVers }, "-"), " \xA0", store.version, " \xA0", /* @__PURE__ */ import_react3.default.createElement("button", { onClick: store.incrementVers }, "+"), " \xA0"), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateFixBuildNumber, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "Minimal build number = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "0", name: "buildNumber", defaultChecked: true }), " 0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "555", name: "buildNumber" }), " 555")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateStartEnabledAssetsId, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "startEnabledAssetsId = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "0", name: "StartEnabledAssetsId", defaultChecked: true }), " []"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "StartEnabledAssetsId" }), " usdt, usdc")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateForceVisibleAssetsId, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "forceVisibleAssetsId  = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "0", name: "ForceVisibleAssetsId", defaultChecked: true }), " []"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "ForceVisibleAssetsId" }), " usdt, usdc")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateForceUnvisibleAssetsId, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "forceUnvisibleAssetsId = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "0", name: "ForceUnvisibleAssetsId", defaultChecked: true }), " []"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "ForceUnvisibleAssetsId" }), " usdt, usdc")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateAsset, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "Assets = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "assets", defaultChecked: true }), " all asset testnet (27)"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "2", name: "assets" }), " ETH asset testnet (6)")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateApi, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "API = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "api", defaultChecked: true }), " api ETH goerli"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "2", name: "api" }), " api ETH sepolia")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateTunein, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "API = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "tunein", defaultChecked: true }), " 2 tabs"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "2", name: "tunein" }), " 3 tabs (add notificationTab)")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateErrorFlag, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "errorFlag = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "errorFlag", defaultChecked: true }), " false"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "2", name: "errorFlag" }), " true")), /* @__PURE__ */ import_react3.default.createElement("button", { onClick: store.saveConfig }, "Save config"), /* @__PURE__ */ import_react3.default.createElement("p", null, store.config)), /* @__PURE__ */ import_react3.default.createElement("div", { style: { margin: 10, backgroundColor: "#FFCCCC" } }, /* @__PURE__ */ import_react3.default.createElement("h3", null, "LOGS ( ", store.logs.length, " )"), /* @__PURE__ */ import_react3.default.createElement("div", null, store.logs.map(({ time, req, res }, id) => {
+    return /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("h1", null, "App :: Dashboard page"), /* @__PURE__ */ import_react3.default.createElement("div", { style: { backgroundColor: "#CCCCCC", padding: 10, float: "left", width: "30%", minHeight: 500 } }, /* @__PURE__ */ import_react3.default.createElement("h3", null, "Config"), /* @__PURE__ */ import_react3.default.createElement("div", { style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "version = \xA0 "), /* @__PURE__ */ import_react3.default.createElement("button", { onClick: store.decrementVers }, "-"), " \xA0", store.version, " \xA0", /* @__PURE__ */ import_react3.default.createElement("button", { onClick: store.incrementVers }, "+"), " \xA0"), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateFixBuildNumber, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "Minimal build number = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "0", name: "buildNumber", defaultChecked: true }), " 0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "555", name: "buildNumber" }), " 555")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateStartEnabledAssetsId, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "startEnabledAssetsId = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "0", name: "StartEnabledAssetsId", defaultChecked: true }), " []"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "StartEnabledAssetsId" }), " MAV, HOP")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateForceVisibleAssetsId, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "forceVisibleAssetsId  = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "0", name: "ForceVisibleAssetsId", defaultChecked: true }), " []"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "ForceVisibleAssetsId" }), " MAV, HOP")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateForceUnvisibleAssetsId, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "forceUnvisibleAssetsId = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "0", name: "ForceUnvisibleAssetsId", defaultChecked: true }), " []"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "ForceUnvisibleAssetsId" }), " MAV, HOP")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateAsset, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "Assets = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "assets", defaultChecked: true }), " all asset testnet (27)"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "2", name: "assets" }), " ETH asset testnet (6)")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateApi, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "API = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "api", defaultChecked: true }), " api ETH goerli"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "2", name: "api" }), " api ETH sepolia")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateTunein, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "API = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "tunein", defaultChecked: true }), " 2 tabs"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "2", name: "tunein" }), " 3 tabs (add notificationTab)")), /* @__PURE__ */ import_react3.default.createElement("div", { onChange: store.updateErrorFlag, style: { padding: 5 } }, /* @__PURE__ */ import_react3.default.createElement("b", null, "errorFlag = \xA0"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "1", name: "errorFlag", defaultChecked: true }), " false"), /* @__PURE__ */ import_react3.default.createElement("label", null, /* @__PURE__ */ import_react3.default.createElement("input", { type: "radio", value: "2", name: "errorFlag" }), " true")), /* @__PURE__ */ import_react3.default.createElement("button", { onClick: store.saveConfig }, "Save config"), /* @__PURE__ */ import_react3.default.createElement("p", null, store.config)), /* @__PURE__ */ import_react3.default.createElement("div", { style: { margin: 10, backgroundColor: "#FFCCCC" } }, /* @__PURE__ */ import_react3.default.createElement("h3", null, "LOGS ( ", store.logs.length, " )"), /* @__PURE__ */ import_react3.default.createElement("div", null, store.logs.map(({ time, req, res }, id) => {
       return /* @__PURE__ */ import_react3.default.createElement("div", { key: "key-log-" + id }, /* @__PURE__ */ import_react3.default.createElement("div", null, new Date(time).toLocaleString("en-US")), /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("b", null, ">>> "), JSON.stringify(req)), /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("b", null, "<<< "), JSON.stringify(res)), /* @__PURE__ */ import_react3.default.createElement("div", { style: { marginTop: 5, height: 2, width: "100%", backgroundColor: "#666666" } }));
     }))));
   }

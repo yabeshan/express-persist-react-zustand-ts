@@ -43,7 +43,7 @@ export default function Page() {
           <input type="radio" value="0" name="StartEnabledAssetsId" defaultChecked /> []
         </label>
         <label>
-          <input type="radio" value="1" name="StartEnabledAssetsId" /> usdt, usdc
+          <input type="radio" value="1" name="StartEnabledAssetsId" /> MAV, HOP
         </label>
       </div>
       <div onChange={store.updateForceVisibleAssetsId} style={{padding:5}}>
@@ -52,7 +52,7 @@ export default function Page() {
           <input type="radio" value="0" name="ForceVisibleAssetsId" defaultChecked /> []
         </label>
         <label>
-          <input type="radio" value="1" name="ForceVisibleAssetsId" /> usdt, usdc
+          <input type="radio" value="1" name="ForceVisibleAssetsId" /> MAV, HOP
         </label>
       </div>
       <div onChange={store.updateForceUnvisibleAssetsId} style={{padding:5}}>
@@ -61,7 +61,7 @@ export default function Page() {
           <input type="radio" value="0" name="ForceUnvisibleAssetsId" defaultChecked /> []
         </label>
         <label>
-          <input type="radio" value="1" name="ForceUnvisibleAssetsId" /> usdt, usdc
+          <input type="radio" value="1" name="ForceUnvisibleAssetsId" /> MAV, HOP
         </label>
       </div>
 
