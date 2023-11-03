@@ -27,6 +27,14 @@
       "logo": "https://app.xchainer.io/assets/coins/bnb.png",
       "tokens": [
         {
+          "id": "mgpbsc",
+          "title": "MGP Token",
+          "symbol": "MGP",
+          "type": "BEP20",
+          "address": "0xE703BcD08AF361b3de09a617fb74F98520954FcA",
+          "logo": "https://app.xchainer.io/assets/coins/mgp.png"
+        },
+        {
           "id": "most-global",
           "title": "MOST Token",
           "symbol": "MOST",
