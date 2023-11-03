@@ -4,13 +4,17 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Home from './pages/home'
 import Dashboard from './pages/dashboard'
+import DashboardNext from './pages/dashboardNext'
 import appStore from './stores/appStore'
+import appNextStore from './stores/appNextStore'
 
 function App() {
   const store = appStore()
+  const storeNext = appNextStore()
 
   useEffect(() => {
     store.init()
+    storeNext.init()
   }, [])
 
   return (
@@ -18,6 +22,7 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboardNext" element={<DashboardNext />} />
       </Routes>
     </BrowserRouter>
   )

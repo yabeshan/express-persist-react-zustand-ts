@@ -12,6 +12,16 @@ import {
   getLogs,
 } from './controllers/dashboard.js'
 
+import { 
+  getNextVersion, 
+  versionNextIncrement, 
+  versionNextDecrement,
+  getNextConfig,
+  getNextLast,
+  saveNextConfig,
+  getNextLogs,
+} from './controllers/dashboardNext.js'
+
 import fileDirName from "./utils/file-dir-name.js"
 if (!global.__dirname || global.__filename) {
   fileDirName(import.meta);
@@ -24,6 +34,9 @@ router.post("/api/config", getConfig);
 router.post("/api/last", getLast);
 router.post("/api/logs", getLogs);
 
+router.post("/api/next/config", getNextConfig);
+router.post("/api/next/last", getNextLast);
+router.post("/api/next/logs", getNextLogs);
 
 
 if (process.env.ADMIN) {
@@ -34,8 +47,13 @@ if (process.env.ADMIN) {
   router.post("/api/version/decrement", versionDecrement);
   router.post("/api/config/save", saveConfig);
 
+  router.post("/api/next/version", getNextVersion);
+  router.post("/api/next/version/increment", versionNextIncrement);
+  router.post("/api/next/version/decrement", versionNextDecrement);
+  router.post("/api/next/config/save", saveNextConfig);
+
   // =========== ADMIN DASHBOARD ============
-  const frontendRoutes = ['/', '/dashboard']
+  const frontendRoutes = ['/', '/dashboard', '/dashboardNext']
   frontendRoutes.forEach((route) => {
     router.get(route, (_, res) => {
       fs.readFile(global.__dirname + '/index.html', 'utf8', (_, text) => {
