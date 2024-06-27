@@ -1097,7 +1097,7 @@
             var dispatcher = resolveDispatcher();
             return dispatcher.useRef(initialValue);
           }
-          function useEffect6(create2, deps) {
+          function useEffect7(create2, deps) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useEffect(create2, deps);
           }
@@ -1879,7 +1879,7 @@
           exports.useContext = useContext3;
           exports.useDebugValue = useDebugValue2;
           exports.useDeferredValue = useDeferredValue;
-          exports.useEffect = useEffect6;
+          exports.useEffect = useEffect7;
           exports.useId = useId;
           exports.useImperativeHandle = useImperativeHandle;
           exports.useInsertionEffect = useInsertionEffect;
@@ -2383,9 +2383,9 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React7 = require_react();
+          var React8 = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React7.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React8.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -3990,7 +3990,7 @@
             {
               if (props.value == null) {
                 if (typeof props.children === "object" && props.children !== null) {
-                  React7.Children.forEach(props.children, function(child) {
+                  React8.Children.forEach(props.children, function(child) {
                     if (child == null) {
                       return;
                     }
@@ -12437,7 +12437,7 @@
             }
           }
           var fakeInternalInstance = {};
-          var emptyRefsObject = new React7.Component().refs;
+          var emptyRefsObject = new React8.Component().refs;
           var didWarnAboutStateAssignmentForComponent;
           var didWarnAboutUninitializedState;
           var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -23518,8 +23518,8 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React7 = require_react();
-          var ReactSharedInternals = React7.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var React8 = require_react();
+          var ReactSharedInternals = React8.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           function error(format) {
             {
               {
@@ -23549,13 +23549,13 @@
             return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y;
           }
           var objectIs = typeof Object.is === "function" ? Object.is : is;
-          var useState3 = React7.useState, useEffect6 = React7.useEffect, useLayoutEffect3 = React7.useLayoutEffect, useDebugValue2 = React7.useDebugValue;
+          var useState3 = React8.useState, useEffect7 = React8.useEffect, useLayoutEffect3 = React8.useLayoutEffect, useDebugValue2 = React8.useDebugValue;
           var didWarnOld18Alpha = false;
           var didWarnUncachedGetSnapshot = false;
           function useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot) {
             {
               if (!didWarnOld18Alpha) {
-                if (React7.startTransition !== void 0) {
+                if (React8.startTransition !== void 0) {
                   didWarnOld18Alpha = true;
                   error("You are using an outdated, pre-release alpha of React 18 that does not support useSyncExternalStore. The use-sync-external-store shim will not work correctly. Upgrade to a newer pre-release.");
                 }
@@ -23586,7 +23586,7 @@
                 });
               }
             }, [subscribe, value, getSnapshot]);
-            useEffect6(function() {
+            useEffect7(function() {
               if (checkIfSnapshotChanged(inst)) {
                 forceUpdate({
                   inst
@@ -23620,7 +23620,7 @@
           var canUseDOM = !!(typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined");
           var isServerEnvironment = !canUseDOM;
           var shim = isServerEnvironment ? useSyncExternalStore$1 : useSyncExternalStore;
-          var useSyncExternalStore$2 = React7.useSyncExternalStore !== void 0 ? React7.useSyncExternalStore : shim;
+          var useSyncExternalStore$2 = React8.useSyncExternalStore !== void 0 ? React8.useSyncExternalStore : shim;
           exports.useSyncExternalStore = useSyncExternalStore$2;
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
@@ -23652,14 +23652,14 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React7 = require_react();
+          var React8 = require_react();
           var shim = require_shim();
           function is(x, y) {
             return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y;
           }
           var objectIs = typeof Object.is === "function" ? Object.is : is;
           var useSyncExternalStore = shim.useSyncExternalStore;
-          var useRef3 = React7.useRef, useEffect6 = React7.useEffect, useMemo3 = React7.useMemo, useDebugValue2 = React7.useDebugValue;
+          var useRef3 = React8.useRef, useEffect7 = React8.useEffect, useMemo3 = React8.useMemo, useDebugValue2 = React8.useDebugValue;
           function useSyncExternalStoreWithSelector2(subscribe, getSnapshot, getServerSnapshot, selector, isEqual) {
             var instRef = useRef3(null);
             var inst;
@@ -23716,7 +23716,7 @@
               return [getSnapshotWithSelector, getServerSnapshotWithSelector];
             }, [getSnapshot, getServerSnapshot, selector, isEqual]), getSelection = _useMemo[0], getServerSelection = _useMemo[1];
             var value = useSyncExternalStore(subscribe, getSelection, getServerSelection);
-            useEffect6(function() {
+            useEffect7(function() {
               inst.hasValue = true;
               inst.value = value;
             }, [value]);
@@ -23745,7 +23745,7 @@
   });
 
   // src/frontend/app.tsx
-  var import_react5 = __toESM(require_react(), 1);
+  var import_react6 = __toESM(require_react(), 1);
   var import_client = __toESM(require_client(), 1);
 
   // node_modules/react-router-dom/dist/index.js
@@ -28006,20 +28006,26 @@
     }))));
   }
 
+  // src/frontend/pages/dashboardSwap.tsx
+  var import_react5 = __toESM(require_react(), 1);
+  function Page4() {
+    return /* @__PURE__ */ import_react5.default.createElement("div", null, /* @__PURE__ */ import_react5.default.createElement("h1", null, "App :: Dashboard SWAP page"));
+  }
+
   // src/frontend/app.tsx
   function App() {
     const store = appStore_default();
     const storeNext = appNextStore_default();
-    (0, import_react5.useEffect)(() => {
+    (0, import_react6.useEffect)(() => {
       store.init();
       storeNext.init();
     }, []);
-    return /* @__PURE__ */ import_react5.default.createElement(BrowserRouter, null, /* @__PURE__ */ import_react5.default.createElement(Routes, null, /* @__PURE__ */ import_react5.default.createElement(Route, { index: true, element: /* @__PURE__ */ import_react5.default.createElement(Page, null) }), /* @__PURE__ */ import_react5.default.createElement(Route, { path: "/dashboard", element: /* @__PURE__ */ import_react5.default.createElement(Page2, null) }), /* @__PURE__ */ import_react5.default.createElement(Route, { path: "/dashboardNext", element: /* @__PURE__ */ import_react5.default.createElement(Page3, null) })));
+    return /* @__PURE__ */ import_react6.default.createElement(BrowserRouter, null, /* @__PURE__ */ import_react6.default.createElement(Routes, null, /* @__PURE__ */ import_react6.default.createElement(Route, { index: true, element: /* @__PURE__ */ import_react6.default.createElement(Page, null) }), /* @__PURE__ */ import_react6.default.createElement(Route, { path: "/dashboard", element: /* @__PURE__ */ import_react6.default.createElement(Page2, null) }), /* @__PURE__ */ import_react6.default.createElement(Route, { path: "/dashboardNext", element: /* @__PURE__ */ import_react6.default.createElement(Page3, null) }), /* @__PURE__ */ import_react6.default.createElement(Route, { path: "/dashboardSwap", element: /* @__PURE__ */ import_react6.default.createElement(Page4, null) })));
   }
   var rootNode = document.getElementById("app");
   if (rootNode) {
     const root = import_client.default.createRoot(rootNode);
-    root.render(/* @__PURE__ */ import_react5.default.createElement(App, null));
+    root.render(/* @__PURE__ */ import_react6.default.createElement(App, null));
   }
 })();
 /*! Bundled license information:

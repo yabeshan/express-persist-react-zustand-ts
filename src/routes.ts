@@ -22,6 +22,10 @@ import {
   getNextLogs,
 } from './controllers/dashboardNext.js'
 
+import {
+  getSwapConfig,
+} from './controllers/dashboardSwap.js'
+
 import fileDirName from "./utils/file-dir-name.js"
 if (!global.__dirname || global.__filename) {
   fileDirName(import.meta);
@@ -38,6 +42,9 @@ router.post("/api/next/config", getNextConfig);
 router.post("/api/next/last", getNextLast);
 router.post("/api/next/logs", getNextLogs);
 
+router.get("/api/swap/config", getSwapConfig);
+router.post("/api/swap/config", getSwapConfig);
+
 
 if (process.env.ADMIN) {
 
@@ -53,7 +60,7 @@ if (process.env.ADMIN) {
   router.post("/api/next/config/save", saveNextConfig);
 
   // =========== ADMIN DASHBOARD ============
-  const frontendRoutes = ['/', '/dashboard', '/dashboardNext']
+  const frontendRoutes = ['/', '/dashboard', '/dashboardNext', '/dashboardSwap']
   frontendRoutes.forEach((route) => {
     router.get(route, (_, res) => {
       fs.readFile(global.__dirname + '/index.html', 'utf8', (_, text) => {

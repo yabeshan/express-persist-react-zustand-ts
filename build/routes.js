@@ -23,7 +23,7 @@ if (process.env.ADMIN) {
     router.post("/api/next/version/increment", versionNextIncrement);
     router.post("/api/next/version/decrement", versionNextDecrement);
     router.post("/api/next/config/save", saveNextConfig);
-    const frontendRoutes = ['/', '/dashboard', '/dashboardNext'];
+    const frontendRoutes = ['/', '/dashboard', '/dashboardNext', '/dashboardSwap'];
     frontendRoutes.forEach((route) => {
         router.get(route, (_, res) => {
             fs.readFile(global.__dirname + '/index.html', 'utf8', (_, text) => {

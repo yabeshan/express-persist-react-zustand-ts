@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/home'
 import Dashboard from './pages/dashboard'
 import DashboardNext from './pages/dashboardNext'
+import DashboardSwap from './pages/dashboardSwap'
 import appStore from './stores/appStore'
 import appNextStore from './stores/appNextStore'
 
@@ -23,6 +24,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboardNext" element={<DashboardNext />} />
+        <Route path="/dashboardSwap" element={<DashboardSwap />} />
       </Routes>
     </BrowserRouter>
   )
