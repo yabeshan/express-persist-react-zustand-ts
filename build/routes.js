@@ -3,6 +3,7 @@ import path from "path";
 import fs from "fs";
 import { getVersion, versionIncrement, versionDecrement, getConfig, getLast, saveConfig, getLogs, } from './controllers/dashboard.js';
 import { getNextVersion, versionNextIncrement, versionNextDecrement, getNextConfig, getNextLast, saveNextConfig, getNextLogs, } from './controllers/dashboardNext.js';
+import { getSwapConfig, } from './controllers/dashboardSwap.js';
 import fileDirName from "./utils/file-dir-name.js";
 if (!global.__dirname || global.__filename) {
     fileDirName(import.meta);
@@ -14,6 +15,8 @@ router.post("/api/logs", getLogs);
 router.post("/api/next/config", getNextConfig);
 router.post("/api/next/last", getNextLast);
 router.post("/api/next/logs", getNextLogs);
+router.get("/api/swap/config", getSwapConfig);
+router.post("/api/swap/config", getSwapConfig);
 if (process.env.ADMIN) {
     router.post("/api/version", getVersion);
     router.post("/api/version/increment", versionIncrement);
