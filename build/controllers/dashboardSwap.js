@@ -65,6 +65,56 @@ export const getSwapConfig = async (req, res) => {
                     "changenow": { "network": "bsc", "name": "TWT", "ticker": "twt", "legacyTicker": "twt", "tokenContract": "0x4b0f1812e5df2a09796481ff14017e6005508003" },
                     "other": {}
                 },
+                "b11": {
+                    "app": { "id": "axs", "symbol": "AXS", "network": "binancecoin", "type": "BEP20", "address": "0x715d400f88c167884bbcc41c5fea407ed4d2f8a0" },
+                    "changenow": { "network": "bsc", "name": "Axie Infinity (Binance Smart Chain)", "ticker": "axs", "legacyTicker": "axsbsc", "tokenContract": "0x715d400f88c167884bbcc41c5fea407ed4d2f8a0" },
+                    "other": {}
+                },
+                "b12": {
+                    "app": { "id": "aave", "symbol": "AAVE", "network": "binancecoin", "type": "BEP20", "address": "0xfb6115445bff7b52feb98650c87f44907e58f802" },
+                    "changenow": { "network": "bsc", "name": "Aave (Binance Smart Chain)", "ticker": "aave", "legacyTicker": "aavebsc", "tokenContract": "0xfb6115445bff7b52feb98650c87f44907e58f802" },
+                    "other": {}
+                },
+                "b13": {
+                    "app": { "id": "dfi", "symbol": "DFI", "network": "binancecoin", "type": "BEP20", "address": "0x361c60b7c2828fcab80988d00d1d542c83387b50" },
+                    "changenow": { "network": "bsc", "name": "DeFiChain (Binance Smart Chain)", "ticker": "dfi", "legacyTicker": "dfibsc", "tokenContract": "0x361c60b7c2828fcab80988d00d1d542c83387b50" },
+                    "other": {}
+                },
+                "b14": {
+                    "app": { "id": "ftm", "symbol": "FTM", "network": "binancecoin", "type": "BEP20", "address": "0xad29abb318791d579433d831ed122afeaf29dcfe" },
+                    "changenow": { "network": "bsc", "name": "Fantom (Binance Smart Chain)", "ticker": "ftm", "legacyTicker": "ftmbsc", "tokenContract": "0xad29abb318791d579433d831ed122afeaf29dcfe" },
+                    "other": {}
+                },
+                "b15": {
+                    "app": { "id": "zil", "symbol": "ZIL", "network": "binancecoin", "type": "BEP20", "address": "0xb86abcb37c3a4b64f74f59301aff131a1becc787" },
+                    "changenow": { "network": "bsc", "name": "Zilliqa (Binance Smart Chain)", "ticker": "zil", "legacyTicker": "zilbsc", "tokenContract": "0xb86abcb37c3a4b64f74f59301aff131a1becc787" },
+                    "other": {}
+                },
+                "b16": {
+                    "app": { "id": "pancakeswap-token", "symbol": "CAKE", "network": "binancecoin", "type": "BEP20", "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82" },
+                    "changenow": { "network": "bsc", "name": "PancakeSwap (BSC)", "ticker": "cake", "legacyTicker": "cake", "tokenContract": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82" },
+                    "other": {}
+                },
+                "b17": {
+                    "app": { "id": "usdd", "symbol": "USDD", "network": "binancecoin", "type": "BEP20", "address": "0xd17479997f34dd9156deef8f95a52d81d265be9c" },
+                    "changenow": { "network": "bsc", "name": "USDD (Binance Smart Chain)", "ticker": "usdd", "legacyTicker": "usddbsc", "tokenContract": "0xd17479997f34dd9156deef8f95a52d81d265be9c" },
+                    "other": {}
+                },
+                "b18": {
+                    "app": { "id": "gmt", "symbol": "GMT", "network": "binancecoin", "type": "BEP20", "address": "0x3019bf2a2ef8040c242c9a4c5c4bd4c81678b2a1" },
+                    "changenow": { "network": "bsc", "name": "stepn", "ticker": "gmt", "legacyTicker": "gmt", "tokenContract": "0x3019bf2a2ef8040c242c9a4c5c4bd4c81678b2a1" },
+                    "other": {}
+                },
+                "b19": {
+                    "app": { "id": "comp", "symbol": "COMP", "network": "binancecoin", "type": "BEP20", "address": "0x52ce071bd9b1c4b00a0b92d298c512478cad67e8" },
+                    "changenow": { "network": "bsc", "name": "Compound (Binance Smart Chain)", "ticker": "comp", "legacyTicker": "compbsc", "tokenContract": "0x52ce071bd9b1c4b00a0b92d298c512478cad67e8" },
+                    "other": {}
+                },
+                "b20": {
+                    "app": { "id": "1inch", "symbol": "1INCH", "network": "binancecoin", "type": "BEP20", "address": "0x111111111117dc0aa78b770fa6a738034120c302" },
+                    "changenow": { "network": "bsc", "name": "1inch Network", "ticker": "1inch", "legacyTicker": "1inchbsc", "tokenContract": "0x111111111117dc0aa78b770fa6a738034120c302" },
+                    "other": {}
+                },
                 "e0": {
                     "app": { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" },
                     "changenow": { "network": "eth", "name": "Ethereum", "ticker": "eth", "legacyTicker": "eth" },
@@ -118,6 +168,56 @@ export const getSwapConfig = async (req, res) => {
                 "e10": {
                     "app": { "id": "matic-erc20", "symbol": "MATIC", "network": "ethereum", "type": "ERC20", "address": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0" },
                     "changenow": { "network": "eth", "name": "Polygon (Matic)", "ticker": "matic", "legacyTicker": "matic", "tokenContract": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0" },
+                    "other": {}
+                },
+                "e11": {
+                    "app": { "id": "ftt", "symbol": "FTT", "network": "ethereum", "type": "ERC20", "address": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9" },
+                    "changenow": { "network": "eth", "name": "FTX Token", "ticker": "ftt", "legacyTicker": "ftt", "tokenContract": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9" },
+                    "other": {}
+                },
+                "e12": {
+                    "app": { "id": "chainlink-erc20", "symbol": "LINK", "network": "ethereum", "type": "ERC20", "address": "0x514910771af9ca656af840dff83e8264ecf986ca" },
+                    "changenow": { "network": "eth", "name": "Chainlink", "ticker": "link", "legacyTicker": "link", "tokenContract": "0x514910771af9ca656af840dff83e8264ecf986ca" },
+                    "other": {}
+                },
+                "e13": {
+                    "app": { "id": "xcn", "symbol": "XCN", "network": "ethereum", "type": "ERC20", "address": "0xa2cd3d43c775978a96bdbf12d733d5a1ed94fb18" },
+                    "changenow": { "network": "eth", "name": "Onyxcoin (ERC20)", "ticker": "xcn", "legacyTicker": "xcnerc20", "tokenContract": "0xa2cd3d43c775978a96bdbf12d733d5a1ed94fb18" },
+                    "other": {}
+                },
+                "e14": {
+                    "app": { "id": "okb", "symbol": "OKB", "network": "ethereum", "type": "ERC20", "address": "0x75231f58b43240c9718dd58b4967c5114342a86c" },
+                    "changenow": { "network": "eth", "name": "OKB", "ticker": "okb", "legacyTicker": "okb", "tokenContract": "0x75231f58b43240c9718dd58b4967c5114342a86c" },
+                    "other": {}
+                },
+                "e15": {
+                    "app": { "id": "ape", "symbol": "APE", "network": "ethereum", "type": "ERC20", "address": "0x4d224452801aced8b2f0aebe155379bb5d594381" },
+                    "changenow": { "network": "eth", "name": "ApeCoin", "ticker": "ape", "legacyTicker": "ape", "tokenContract": "0x4d224452801aced8b2f0aebe155379bb5d594381" },
+                    "other": {}
+                },
+                "e16": {
+                    "app": { "id": "sand", "symbol": "SAND", "network": "ethereum", "type": "ERC20", "address": "0x3845badade8e6dff049820680d1f14bd3903a5d0" },
+                    "changenow": { "network": "eth", "name": "The Sandbox", "ticker": "sand", "legacyTicker": "sand", "tokenContract": "0x3845badade8e6dff049820680d1f14bd3903a5d0" },
+                    "other": {}
+                },
+                "e17": {
+                    "app": { "id": "uni-erc20", "symbol": "UNI", "network": "ethereum", "type": "ERC20", "address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984" },
+                    "changenow": { "network": "eth", "name": "Uniswap", "ticker": "uni", "legacyTicker": "uni", "tokenContract": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984" },
+                    "other": {}
+                },
+                "e18": {
+                    "app": { "id": "axs-erc20", "symbol": "AXS", "network": "ethereum", "type": "ERC20", "address": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b" },
+                    "changenow": { "network": "eth", "name": "Axie Infinity", "ticker": "axs", "legacyTicker": "axs", "tokenContract": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b" },
+                    "other": {}
+                },
+                "e19": {
+                    "app": { "id": "mana", "symbol": "MANA", "network": "ethereum", "type": "ERC20", "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942" },
+                    "changenow": { "network": "eth", "name": "Decentraland", "ticker": "mana", "legacyTicker": "mana", "tokenContract": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942" },
+                    "other": {}
+                },
+                "e20": {
+                    "app": { "id": "aave-erc20", "symbol": "AAVE", "network": "ethereum", "type": "ERC20", "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9" },
+                    "changenow": { "network": "eth", "name": "Aave", "ticker": "aave", "legacyTicker": "aave", "tokenContract": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9" },
                     "other": {}
                 },
                 "t0": {
@@ -176,6 +276,36 @@ export const getSwapConfig = async (req, res) => {
                     { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" },
                     { "id": "twt", "symbol": "TWT", "network": "binancecoin", "type": "BEP20" }
                 ], [
+                    { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" },
+                    { "id": "axs", "symbol": "AXS", "network": "binancecoin", "type": "BEP20" }
+                ], [
+                    { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" },
+                    { "id": "aave", "symbol": "AAVE", "network": "binancecoin", "type": "BEP20" }
+                ], [
+                    { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" },
+                    { "id": "dfi", "symbol": "DFI", "network": "binancecoin", "type": "BEP20" }
+                ], [
+                    { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" },
+                    { "id": "ftm", "symbol": "FTM", "network": "binancecoin", "type": "BEP20" }
+                ], [
+                    { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" },
+                    { "id": "zil", "symbol": "ZIL", "network": "binancecoin", "type": "BEP20" }
+                ], [
+                    { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" },
+                    { "id": "pancakeswap-token", "symbol": "CAKE", "network": "binancecoin", "type": "BEP20" }
+                ], [
+                    { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" },
+                    { "id": "usdd", "symbol": "USDD", "network": "binancecoin", "type": "BEP20" }
+                ], [
+                    { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" },
+                    { "id": "gmt", "symbol": "GMT", "network": "binancecoin", "type": "BEP20" }
+                ], [
+                    { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" },
+                    { "id": "comp", "symbol": "COMP", "network": "binancecoin", "type": "BEP20" }
+                ], [
+                    { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" },
+                    { "id": "1inch", "symbol": "1INCH", "network": "binancecoin", "type": "BEP20" }
+                ], [
                     { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" },
                     { "id": "dai-erc20", "symbol": "DAI", "network": "ethereum", "type": "ERC20" }
                 ], [
@@ -205,6 +335,36 @@ export const getSwapConfig = async (req, res) => {
                 ], [
                     { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" },
                     { "id": "matic-erc20", "symbol": "MATIC", "network": "ethereum", "type": "ERC20" }
+                ], [
+                    { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" },
+                    { "id": "ftt", "symbol": "FTT", "network": "ethereum", "type": "ERC20" }
+                ], [
+                    { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" },
+                    { "id": "chainlink-erc20", "symbol": "LINK", "network": "ethereum", "type": "ERC20" }
+                ], [
+                    { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" },
+                    { "id": "xcn", "symbol": "XCN", "network": "ethereum", "type": "ERC20" }
+                ], [
+                    { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" },
+                    { "id": "okb", "symbol": "OKB", "network": "ethereum", "type": "ERC20" }
+                ], [
+                    { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" },
+                    { "id": "ape", "symbol": "APE", "network": "ethereum", "type": "ERC20" }
+                ], [
+                    { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" },
+                    { "id": "sand", "symbol": "SAND", "network": "ethereum", "type": "ERC20" }
+                ], [
+                    { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" },
+                    { "id": "uni-erc20", "symbol": "UNI", "network": "ethereum", "type": "ERC20" }
+                ], [
+                    { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" },
+                    { "id": "axs-erc20", "symbol": "AXS", "network": "ethereum", "type": "ERC20" }
+                ], [
+                    { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" },
+                    { "id": "mana", "symbol": "MANA", "network": "ethereum", "type": "ERC20" }
+                ], [
+                    { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" },
+                    { "id": "aave-erc20", "symbol": "AAVE", "network": "ethereum", "type": "ERC20" }
                 ], [
                     { "id": "tron", "symbol": "TRX", "network": "tron", "type": "coin" },
                     { "id": "tether-trc20", "symbol": "USDT-TRC20", "network": "tron", "type": "TRC20" }
