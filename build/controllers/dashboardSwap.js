@@ -237,15 +237,15 @@ export const getSwapConfig = async (req, res) => {
                 }
             },
             "availablePairs": [[
-                    { "id": "bitcoin", "symbol": "BTC", "network": "bitcoin", "type": "coin" },
-                    { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" }
-                ], [
-                    { "id": "bitcoin", "symbol": "BTC", "network": "bitcoin", "type": "coin" },
-                    { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" }
-                ], [
-                    { "id": "bitcoin", "symbol": "BTC", "network": "bitcoin", "type": "coin" },
-                    { "id": "tron", "symbol": "TRX", "network": "tron", "type": "coin" }
-                ], [
+                //     { "id": "bitcoin", "symbol": "BTC", "network": "bitcoin", "type": "coin" },
+                //     { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" }
+                // ], [
+                //     { "id": "bitcoin", "symbol": "BTC", "network": "bitcoin", "type": "coin" },
+                //     { "id": "ethereum", "symbol": "ETH", "network": "ethereum", "type": "coin" }
+                // ], [
+                //     { "id": "bitcoin", "symbol": "BTC", "network": "bitcoin", "type": "coin" },
+                //     { "id": "tron", "symbol": "TRX", "network": "tron", "type": "coin" }
+                // ], [
                     { "id": "binancecoin", "symbol": "BNB", "network": "binancecoin", "type": "coin" },
                     { "id": "tether", "symbol": "USDT", "network": "binancecoin", "type": "BEP20" }
                 ], [
