@@ -17,11 +17,7 @@ router.post("/api/next/last", getNextLast);
 router.post("/api/next/logs", getNextLogs);
 router.get("/api/swap/config", getSwapConfig);
 router.post("/api/swap/config", getSwapConfig);
-router.get("/configs/swap", (_, res) => {
-    fs.readFile(global.__dirname + '/public/configs/swap/config.json', 'utf8', (_, text) => {
-        res.send(text);
-    });
-});
+router.get("/configs/swap", getSwapConfig);
 if (process.env.ADMIN) {
     router.post("/api/version", getVersion);
     router.post("/api/version/increment", versionIncrement);

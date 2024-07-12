@@ -45,11 +45,14 @@ router.post("/api/next/logs", getNextLogs);
 router.get("/api/swap/config", getSwapConfig);
 router.post("/api/swap/config", getSwapConfig);
 
-router.get("/configs/swap", (_, res) => {
-  fs.readFile(global.__dirname + '/public/configs/swap/config.json', 'utf8', (_, text) => {
-    res.send(text) 
-  })
-}) 
+
+router.get("/configs/swap", getSwapConfig);
+// NO WORK
+// router.get("/configs/swap", (_, res) => {
+//   fs.readFile(global.__dirname + '/public/configs/swap/config.json', 'utf8', (_, text) => {
+//     res.send(text) 
+//   })
+// }) 
 
 
 if (process.env.ADMIN) {
